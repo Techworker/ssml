@@ -24,6 +24,11 @@ use Techworker\Ssml\Element\Word;
 use Techworker\Ssml\Specification;
 use Techworker\Ssml\SsmlException;
 
+/**
+ * Class Alexa
+ *
+ * A validator for the alexa specification.
+ */
 class Alexa extends Specification
 {
     public const BREAK_STRENGTHS = ['none', 'x-weak', 'weak', 'medium', 'strong', 'x-strong'];
@@ -35,7 +40,8 @@ class Alexa extends Specification
     public const WORD_ROLES = ['ivona:VB', 'ivona:VBD', 'ivona:NN', 'ivona:SENSE_1'];
 
     /**
-     * Gets the
+     * Gets the allowed elements.
+     *
      * @return array
      */
     protected function getAllowedElements() : array
@@ -53,7 +59,13 @@ class Alexa extends Specification
         ];
     }
 
-    protected function validateElement(BaseElement $element)
+    /**
+     * Calls validation methods based on the givene element.
+     *
+     * @param BaseElement $element
+     * @return void
+     */
+    protected function validateElement(BaseElement $element) : void
     {
         if ($element instanceof Break_) {
             $this->validateBreak($element);
@@ -68,6 +80,7 @@ class Alexa extends Specification
 
     /**
      * Validates a Break_ element.
+     *
      * @param Break_ $break
      * @throws InvalidAttributeValueException
      */
