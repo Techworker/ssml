@@ -7,10 +7,10 @@ pwd = $$(pwd)
 host = $$(ip addr show docker0 | grep " inet " | awk '{ print $$2}' | cut -d "/" -f1)
 
 init:
-	docker build -t fn-middleware ./resources/docker
+	docker build -t ssml ./resources/docker
 
 docker:
-	docker run -it --rm -e LOCAL_USER_ID=`id -u` -e XDEBUG_CONFIG="remote_host=dockerhost" -e PHP_IDE_CONFIG="serverName=fn-middleware" --name fn-middleware --add-host dockerhost:$(host) -v $(pwd):/usr/src -w /usr/src fn-middleware $(args)
+	docker run -it --rm -e LOCAL_USER_ID=`id -u` -e XDEBUG_CONFIG="remote_host=dockerhost" -e PHP_IDE_CONFIG="serverName=ssml" --name ssml --add-host dockerhost:$(host) -v $(pwd):/usr/src -w /usr/src ssml $(args)
 
 bash:
 	make docker args=bash
