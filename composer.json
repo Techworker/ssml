@@ -1,0 +1,24 @@
+{
+    "name": "techworker/ssml",
+    "description": "A PHP library to generate SSML.",
+    "authors": [
+        {
+            "name": "Benjamin Ansbach",
+            "email": "ben@techworker.de"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Techworker\\Ssml\\": "src/",
+            "Techworker\\Ssml\\Tests\\": "tests/src/"
+        }
+    }
+}
