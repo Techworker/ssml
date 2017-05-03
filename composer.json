@@ -1,6 +1,7 @@
 {
     "name": "techworker/ssml",
     "description": "A PHP library to generate SSML.",
+    "license": "MIT",
     "authors": [
         {
             "name": "Benjamin Ansbach",
