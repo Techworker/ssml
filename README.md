@@ -369,3 +369,5 @@ try
 }
 
 ```
+
+Test packagist
