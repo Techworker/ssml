@@ -40,7 +40,7 @@ class AlexaTest extends TestCase
 
     public function testBreakStrengthValid()
     {
-        foreach(Alexa::BREAK_STRENGTHS as $strength) {
+        foreach (Alexa::BREAK_STRENGTHS as $strength) {
             $ssml = SsmlBuilder::factory()->brkStrength($strength);
             $spec = new Alexa();
             $spec->validate($ssml);
@@ -91,7 +91,7 @@ class AlexaTest extends TestCase
 
     public function testPhonemeAlphabetValid()
     {
-        foreach(Alexa::PHONEME_ALPHABETS as $alphabet) {
+        foreach (Alexa::PHONEME_ALPHABETS as $alphabet) {
             $ssml = SsmlBuilder::factory()->phoneme($alphabet, 'A', 'foo');
             $spec = new Alexa();
             $spec->validate($ssml);
@@ -112,9 +112,9 @@ class AlexaTest extends TestCase
 
     public function testSayAsInterpretAsValid()
     {
-        foreach(Alexa::SAY_AS_INTERPRET_AS as $interpretAs) {
+        foreach (Alexa::SAY_AS_INTERPRET_AS as $interpretAs) {
             $format = null;
-            if($interpretAs === 'date') {
+            if ($interpretAs === 'date') {
                 $format = 'mdy';
             }
             $ssml = SsmlBuilder::factory()->sayAs($interpretAs, 'A', $format);
@@ -137,7 +137,7 @@ class AlexaTest extends TestCase
 
     public function testSayAsDateFormatValid()
     {
-        foreach(Alexa::SAY_AS_DATE_FORMATS as $format) {
+        foreach (Alexa::SAY_AS_DATE_FORMATS as $format) {
             $ssml = SsmlBuilder::factory()->sayAs('date', 'A', $format);
             $spec = new Alexa();
             $spec->validate($ssml);
@@ -158,7 +158,7 @@ class AlexaTest extends TestCase
 
     public function testWordRoleValid()
     {
-        foreach(Alexa::WORD_ROLES as $role) {
+        foreach (Alexa::WORD_ROLES as $role) {
             $ssml = SsmlBuilder::factory()->word($role, 'A');
             $spec = new Alexa();
             $spec->validate($ssml);

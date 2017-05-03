@@ -21,5 +21,4 @@ class ParagraphTest extends TestCase
         $element = Paragraph::factory();
         self::assertEquals('<p/>', (string)$element);
     }
-
 }

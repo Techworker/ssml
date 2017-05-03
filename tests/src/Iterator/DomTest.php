@@ -31,14 +31,13 @@ class DomTest extends TestCase
         ];
 
         $p = SsmlBuilder::factory()->p('foo')->text('aaa')->brk()->audio('aaa')->text('dsdasda')->p('ola')->root();
-        foreach($p->getDomIterator() as $k => $domNode)
-        {
+        foreach ($p->getDomIterator() as $k => $domNode) {
             $expectedNode = array_shift($expected);
             self::assertEquals($expectedNode[0], $domNode->nodeType);
-            if($domNode->nodeType === XML_ELEMENT_NODE) {
+            if ($domNode->nodeType === XML_ELEMENT_NODE) {
                 self::assertEquals($expectedNode[1], $domNode->nodeName);
             }
-            if($domNode->nodeType === XML_TEXT_NODE) {
+            if ($domNode->nodeType === XML_TEXT_NODE) {
                 self::assertEquals($expectedNode[1], $domNode->textContent);
             }
         }
