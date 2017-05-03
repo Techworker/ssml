@@ -1,0 +1,15 @@
+# PHPSTORM
+.idea
+.DS_Store
+
+# Composer
+vendor/
+composer.lock
+composer.phar
+
+#phpcsfixer
+.php_cs.cache
+php-cs-fixer
+
+# phpunit
+phpunit.xml

@@ -1,0 +1,7 @@
+/resources        export-ignore
+/tests            export-ignore
+/README.md        export-ignore
+/CHANGELOG.md     export-ignore
+/Makefile         export-ignore
+/phpunit.xml.dist export-ignore
+/bin              export-ignore
