@@ -5,7 +5,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * Written by Benjamin Ansbach <ben@techworker.de>, 2017
+ * Written by Benjamin Ansbach <benjaminansbach@gmail.com>, 2019
  */
 declare(strict_types = 1);
 namespace Techworker\Ssml;
@@ -13,11 +13,17 @@ namespace Techworker\Ssml;
 use Techworker\Ssml\Traits\AudioTrait;
 use Techworker\Ssml\Traits\BreakTrait;
 use Techworker\Ssml\Traits\CustomTrait;
+use Techworker\Ssml\Traits\Amazon\EffectTrait;
+use Techworker\Ssml\Traits\EmphasisTrait;
+use Techworker\Ssml\Traits\LangTrait;
 use Techworker\Ssml\Traits\ParagraphTrait;
 use Techworker\Ssml\Traits\PhonemeTrait;
+use Techworker\Ssml\Traits\ProsodyTrait;
 use Techworker\Ssml\Traits\SayAsTrait;
 use Techworker\Ssml\Traits\SentenceTrait;
+use Techworker\Ssml\Traits\SubTrait;
 use Techworker\Ssml\Traits\TextTrait;
+use Techworker\Ssml\Traits\VoiceTrait;
 use Techworker\Ssml\Traits\WordTrait;
 
 /**
@@ -30,11 +36,17 @@ abstract class ContainerElement extends BaseElement
     use AudioTrait;
     use BreakTrait;
     use CustomTrait;
+    use EffectTrait;
+    use EmphasisTrait;
+    use LangTrait;
     use ParagraphTrait;
     use PhonemeTrait;
+    use ProsodyTrait;
     use SayAsTrait;
     use SentenceTrait;
+    use SubTrait;
     use TextTrait;
+    use VoiceTrait;
     use WordTrait;
 
     /**
