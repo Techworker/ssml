@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace Techworker\Ssml\Traits;
 
 use Techworker\Ssml\ContainerElement;
-use Techworker\Ssml\Element\Amazon\Emphasis;
+use Techworker\Ssml\Element\Emphasis;
 
 /**
  * Class EmphasisTrait
