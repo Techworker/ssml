@@ -9,7 +9,7 @@
  */
 declare(strict_types = 1);
 
-namespace Techworker\Ssml\Specification;
+namespace Techworker\Ssml\Specification\Exception;
 
 use Techworker\Ssml\BaseElement;
 use Techworker\Ssml\SsmlException;

@@ -11,14 +11,14 @@ declare(strict_types = 1);
 
 namespace Techworker\Ssml\Tests\Specification;
 
-use Techworker\Ssml\Specification\Alexa;
+use Techworker\Ssml\Specification\Exception\Alexa;
 use Techworker\Ssml\SsmlBuilder;
 use Techworker\Ssml\Tests\TestCase;
 
 class AlexaTest extends TestCase
 {
     /**
-     * @expectedException \Techworker\Ssml\Specification\InvalidElementException
+     * @expectedException \Techworker\Ssml\Specification\Exception\InvalidElementException
      */
     public function testNotAllowedElementThrowsException()
     {
@@ -28,7 +28,7 @@ class AlexaTest extends TestCase
     }
 
     /**
-     * @expectedException  \Techworker\Ssml\Specification\InvalidAttributeValueException
+     * @expectedException  \Techworker\Ssml\Specification\Exception\InvalidAttributeValueException
      * @expectedExceptionMessageRegExp /attribute strength/
      */
     public function testBreakStrengthInvalid()
@@ -50,7 +50,7 @@ class AlexaTest extends TestCase
 
 
     /**
-     * @expectedException  \Techworker\Ssml\Specification\InvalidAttributeValueException
+     * @expectedException  \Techworker\Ssml\Specification\Exception\InvalidAttributeValueException
      * @expectedExceptionMessageRegExp /attribute time/
      */
     public function testBreakTimeInvalid()
@@ -61,7 +61,7 @@ class AlexaTest extends TestCase
     }
 
     /**
-     * @expectedException  \Techworker\Ssml\Specification\InvalidAttributeValueException
+     * @expectedException  \Techworker\Ssml\Specification\Exception\InvalidAttributeValueException
      * @expectedExceptionMessageRegExp /attribute time/
      */
     public function testBreakTimeInvalid2()
@@ -80,7 +80,7 @@ class AlexaTest extends TestCase
     }
 
     /**
-     * @expectedException  \Techworker\Ssml\Specification\InvalidAttributeValueException
+     * @expectedException  \Techworker\Ssml\Specification\Exception\InvalidAttributeValueException
      * @expectedExceptionMessageRegExp /attribute alphabet/
      */
     public function testPhonemeAlphabetInvalid()
@@ -101,7 +101,7 @@ class AlexaTest extends TestCase
     }
 
     /**
-     * @expectedException  \Techworker\Ssml\Specification\InvalidAttributeValueException
+     * @expectedException  \Techworker\Ssml\Specification\Exception\InvalidAttributeValueException
      * @expectedExceptionMessageRegExp /attribute interpret-as/
      */
     public function testSayAsInterpretAsInvalid()
@@ -126,7 +126,7 @@ class AlexaTest extends TestCase
     }
 
     /**
-     * @expectedException  \Techworker\Ssml\Specification\InvalidAttributeValueException
+     * @expectedException  \Techworker\Ssml\Specification\Exception\InvalidAttributeValueException
      * @expectedExceptionMessageRegExp /attribute format/
      */
     public function testSayAsDateFormatInvalid()
@@ -147,7 +147,7 @@ class AlexaTest extends TestCase
     }
 
     /**
-     * @expectedException  \Techworker\Ssml\Specification\InvalidAttributeValueException
+     * @expectedException  \Techworker\Ssml\Specification\Exception\InvalidAttributeValueException
      * @expectedExceptionMessageRegExp /attribute role/
      */
     public function testWordRoleInvalid()
