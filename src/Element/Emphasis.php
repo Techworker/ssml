@@ -8,7 +8,7 @@
  * Written by Benjamin Ansbach <benjaminansbach@gmail.com>, 2019
  */
 declare(strict_types = 1);
-namespace Techworker\Ssml\Element\Amazon;
+namespace Techworker\Ssml\Element;
 
 use Techworker\Ssml\ContainerElement;
 

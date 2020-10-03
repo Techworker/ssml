@@ -11,7 +11,7 @@ declare(strict_types = 1);
 
 namespace Techworker\Ssml\Tests\Element;
 
-use Techworker\Ssml\Element\Amazon\Emphasis;
+use Techworker\Ssml\Element\Emphasis;
 use Techworker\Ssml\Tests\TestCase;
 
 class EmphasisTest extends TestCase

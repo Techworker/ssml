@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace Techworker\Ssml;
 
 use Techworker\Ssml\Element\Speak;
-use Techworker\Ssml\Specification\InvalidElementException;
+use Techworker\Ssml\Specification\Exception\InvalidElementException;
 
 abstract class Specification
 {

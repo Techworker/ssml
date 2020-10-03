@@ -9,10 +9,10 @@
  */
 declare(strict_types = 1);
 
-namespace Techworker\Ssml\Specification;
+namespace Techworker\Ssml\Specification\Exception;
 
 use Techworker\Ssml\BaseElement;
-use Techworker\Ssml\Element\Amazon\Emphasis;
+use Techworker\Ssml\Element\Emphasis;
 use Techworker\Ssml\Element\Lang;
 use Techworker\Ssml\Element\Audio;
 use Techworker\Ssml\Element\Break_;

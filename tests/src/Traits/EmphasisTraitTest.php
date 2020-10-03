@@ -11,7 +11,7 @@ declare(strict_types = 1);
 
 namespace Techworker\Ssml\Tests\Traits;
 
-use Techworker\Ssml\Element\Amazon\Emphasis;
+use Techworker\Ssml\Element\Emphasis;
 use Techworker\Ssml\SsmlBuilder;
 use Techworker\Ssml\Tests\TestCase;
 

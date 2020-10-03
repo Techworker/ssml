@@ -357,7 +357,7 @@ This library ships with a Amazon Alexa validator.
 ```php
 <?php
 use \Techworker\Ssml\SsmlBuilder;
-use \Techworker\Ssml\Specification\Alexa;
+use Techworker\Ssml\Specification\Exception\Alexa;
 
 $ssml = SsmlBuilder::factory()->paragraph()->root(); //..whatever 
 
